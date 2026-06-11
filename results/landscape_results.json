@@ -1,0 +1,30 @@
+{
+  "mlp3_kmnist": {
+    "grid_size": 15,
+    "margin": 0.3,
+    "panels": [
+      "No Alignment",
+      "Weight Matching",
+      "Activation Matching",
+      "WM (REPAIR midpoint)"
+    ],
+    "barriers_along_diagonal": {
+      "No alignment": 0.9112560329914093,
+      "Weight Matching": 0.0011229660987853718,
+      "Activation Matching": 0.001122961306571968,
+      "WM (REPAIR midpoint)": 0.0011229652404785018
+    },
+    "loss_min": 0.3032319064617157,
+    "loss_max": 1.3137379333496093
+  },
+  "convbn_svhn": {
+    "grid_size": 13,
+    "margin": 0.25,
+    "panels": [
+      "No Alignment",
+      "Weight Matching"
+    ],
+    "loss_min": 0.19336576903606384,
+    "loss_max": 2.213186779708018
+  }
+}

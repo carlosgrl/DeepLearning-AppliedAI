@@ -1,0 +1,96 @@
+{
+  "model": "MobileNetV3-small",
+  "dataset": "EuroSAT",
+  "tasks": {
+    "T1_veg_vs_built": {
+      "pos_classes": [
+        1,
+        2,
+        5
+      ],
+      "neg_classes": [
+        3,
+        4,
+        7
+      ],
+      "per_task_metrics": {
+        "loss": 0.02628291526188829,
+        "acc": 0.9915756630265211
+      }
+    },
+    "T2_water_vs_land": {
+      "pos_classes": [
+        8,
+        9
+      ],
+      "neg_classes": [
+        0,
+        6
+      ],
+      "per_task_metrics": {
+        "loss": 0.03553266497795599,
+        "acc": 0.987243735763098
+      }
+    }
+  },
+  "joint_evaluation": {
+    "T1_veg_vs_built_only": {
+      "loss": 1.8570138300789727,
+      "acc": 0.7603703703703704
+    },
+    "T2_water_vs_land_only": {
+      "loss": 2.0474983967675104,
+      "acc": 0.7085185185185185
+    },
+    "task_arith_naive": {
+      "loss": null,
+      "acc": 0.5096296296296297
+    },
+    "task_arith_best_lambda": {
+      "lambda": 0.6,
+      "loss": 0.31417299884336963,
+      "acc": 0.8688888888888889
+    },
+    "ties_merge": {
+      "loss": 0.3597906925060131,
+      "acc": 0.8375925925925926
+    }
+  },
+  "lambda_sweep": [
+    {
+      "lambda": 0.2,
+      "loss": 0.4727691912209546,
+      "acc": 0.7748148148148148
+    },
+    {
+      "lambda": 0.4,
+      "loss": 0.3213696300541913,
+      "acc": 0.8618518518518519
+    },
+    {
+      "lambda": 0.6,
+      "loss": 0.31417299884336963,
+      "acc": 0.8688888888888889
+    },
+    {
+      "lambda": 0.8,
+      "loss": null,
+      "acc": 0.5096296296296297
+    },
+    {
+      "lambda": 1.0,
+      "loss": null,
+      "acc": 0.5096296296296297
+    },
+    {
+      "lambda": 1.2,
+      "loss": null,
+      "acc": 0.5096296296296297
+    },
+    {
+      "lambda": 1.5,
+      "loss": null,
+      "acc": 0.5096296296296297
+    }
+  ]
+}
